@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Teste grátis</title>
+    <title>Free Test</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
             z-index: -1;
         }
         
-        /* Tela de Loading */
+        /* Loading Screen */
         #loading-screen {
             position: fixed;
             top: 0;
@@ -132,7 +132,7 @@
             letter-spacing: 1px;
         }
         
-        /* Conteúdo Principal */
+        /* Main Content */
         .container {
             width: 100%;
             max-width: 680px;
@@ -178,7 +178,7 @@
             text-shadow: 0 0 10px rgba(255, 63, 129, 0.3);
         }
         
-        /* Teaser aprimorado */
+        /* Enhanced Teaser */
         .teaser-box {
             background: linear-gradient(135deg, #FF3F81 0%, #E5003C 100%);
             border-radius: 15px;
@@ -399,521 +399,520 @@
             font-weight: 600;
             color: #D8B9C3;
         }
-        
         .implication-list li:before {
-            content: "💔";
-            position: absolute;
-            left: 0;
-            font-size: 18px;
-            animation: pulse 2s infinite;
-            filter: drop-shadow(0 0 3px rgba(255, 63, 129, 0.5));
-        }
+    content: "💔";
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    animation: pulse 2s infinite;
+    filter: drop-shadow(0 0 3px rgba(255, 63, 129, 0.5));
+}
+
+.warning {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 63, 129, 0.1));
+    padding: 25px 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    text-align: center;
+    font-weight: 800;
+    color: #FFD700;
+    font-size: clamp(16px, 4.5vw, 19px);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    font-family: 'Poppins', Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.warning::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: warningShine 3s infinite;
+}
+
+/* Microcopy */
+.microcopy {
+    text-align: center;
+    margin: 25px 0;
+    font-size: clamp(14px, 3.5vw, 16px);
+    color: #D8B9C3;
+    font-weight: 600;
+    font-style: italic;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 4s;
+    opacity: 0;
+    text-shadow: 0 0 5px rgba(255, 63, 129, 0.3);
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 35px auto 15px;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #FF3F81, #E5003C);
+    color: #FAF1F4;
+    border: none;
+    border-radius: 30px;
+    font-size: clamp(17px, 4.5vw, 20px);
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 25px rgba(255, 63, 129, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: buttonPulse 2s infinite;
+    font-family: 'Poppins', Arial, sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 35px rgba(255, 63, 129, 0.7);
+}
+
+.cta-button:active {
+    transform: translateY(-3px) scale(0.98);
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+/* Social Proof */
+.social-proof {
+    text-align: center;
+    margin: 25px 0 15px;
+    padding: 18px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 63, 129, 0.05));
+    border-radius: 12px;
+    border-left: 3px solid #FFD700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.social-proof p {
+    font-size: clamp(13px, 3.5vw, 15px);
+    color: #D8B9C3;
+    margin: 0;
+    font-weight: 600;
+}
+
+.social-proof .number {
+    color: #FFD700;
+    font-weight: 800;
+    animation: countUp 2s ease-out;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.red {
+    color: #E5003C;
+    font-weight: 800;
+    text-shadow: 0 0 5px rgba(229, 0, 60, 0.5);
+}
+
+.fontnegrito {
+    font-weight: 700;
+    color: #FAF1F4;
+}
+
+/* Mobile Flex Container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* Animations */
+@keyframes progress {
+    0% { width: 0%; }
+    80% { width: 90%; }
+    100% { width: 100%; }
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+    100% { transform: translateX(100%); }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes markerMove {
+    0% { 
+        top: 85px;
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+    }
+    100% { 
+        top: 55px;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 0.8; 
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+@keyframes warningShine {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}
         
-        .warning {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 63, 129, 0.1));
-            padding: 25px 20px;
-            border-radius: 15px;
-            margin: 30px 0;
-            text-align: center;
-            font-weight: 800;
-            color: #FFD700;
-            font-size: clamp(16px, 4.5vw, 19px);
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
-            border: 2px solid rgba(255, 215, 0, 0.5);
-            position: relative;
-            overflow: hidden;
-            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
-            font-family: 'Poppins', Arial, sans-serif;
-            letter-spacing: 0.5px;
-        }
-        
-        .warning::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: warningShine 3s infinite;
-        }
-        
-        /* Microcopy */
-        .microcopy {
-            text-align: center;
-            margin: 25px 0;
-            font-size: clamp(14px, 3.5vw, 16px);
-            color: #D8B9C3;
-            font-weight: 600;
-            font-style: italic;
-            animation: fadeInUp 1s ease forwards;
-            animation-delay: 4s;
-            opacity: 0;
-            text-shadow: 0 0 5px rgba(255, 63, 129, 0.3);
-        }
-        
-        .cta-button {
-            display: block;
-            width: 100%;
-            max-width: 350px;
-            margin: 35px auto 15px;
-            padding: 20px 30px;
-            background: linear-gradient(135deg, #FF3F81, #E5003C);
-            color: #FAF1F4;
-            border: none;
-            border-radius: 30px;
-            font-size: clamp(17px, 4.5vw, 20px);
-            font-weight: 800;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 25px rgba(255, 63, 129, 0.5);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            animation: buttonPulse 2s infinite;
-            font-family: 'Poppins', Arial, sans-serif;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 0 35px rgba(255, 63, 129, 0.7);
-        }
-        
-        .cta-button:active {
-            transform: translateY(-3px) scale(0.98);
-        }
-        
-        .cta-button::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-        
-        .cta-button:hover::before {
-            left: 100%;
-        }
-        
-        /* Social Proof */
-        .social-proof {
-            text-align: center;
-            margin: 25px 0 15px;
-            padding: 18px;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 63, 129, 0.05));
-            border-radius: 12px;
-            border-left: 3px solid #FFD700;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
-        }
-        
-        .social-proof p {
-            font-size: clamp(13px, 3.5vw, 15px);
-            color: #D8B9C3;
-            margin: 0;
-            font-weight: 600;
-        }
-        
-        .social-proof .number {
-            color: #FFD700;
-            font-weight: 800;
-            animation: countUp 2s ease-out;
-            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
-        }
-        
-        .red {
-            color: #E5003C;
-            font-weight: 800;
-            text-shadow: 0 0 5px rgba(229, 0, 60, 0.5);
-        }
-        
-        .fontnegrito {
-            font-weight: 700;
-            color: #FAF1F4;
-        }
-        
-        /* Container para flex no mobile */
-        .page-container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            padding: 10px;
-        }
-        
-        /* Animações */
-        @keyframes progress {
-            0% { width: 0%; }
-            80% { width: 90%; }
-            100% { width: 100%; }
-        }
-        
-        @keyframes rainbow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        @keyframes shimmer {
-            100% { transform: translateX(100%); }
-        }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes markerMove {
-            0% { 
-                top: 85px;
-                opacity: 0;
-                transform: translateX(-50%) scale(0.8);
-            }
-            100% { 
-                top: 55px;
-                opacity: 1;
-                transform: translateX(-50%) scale(1);
-            }
-        }
-        
-        @keyframes pulse {
-            0%, 100% { 
-                opacity: 0.8; 
-                transform: scale(1);
-            }
-            50% { 
-                opacity: 1; 
-                transform: scale(1.1);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(180deg); }
-        }
-        
-        @keyframes warningShine {
-            0% { left: -100%; }
-            50% { left: 100%; }
-            100% { left: 100%; }
-        }
-        
-        @keyframes buttonPulse {
-            0%, 100% { 
-                box-shadow: 0 0 25px rgba(255, 63, 129, 0.5);
-            }
-            50% { 
-                box-shadow: 0 0 35px rgba(255, 63, 129, 0.8), 
-                           0 0 0 6px rgba(255, 63, 129, 0.1);
-            }
-        }
-        
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes glitchText {
-            0%, 100% { 
-                text-shadow: 0 0 10px rgba(255, 63, 129, 0.5);
-            }
-            25% { 
-                text-shadow: 2px 0 0 rgba(255, 63, 129, 0.8), 
-                            -2px 0 0 rgba(229, 0, 60, 0.8);
-            }
-            50% { 
-                text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
-            }
-            75% { 
-                text-shadow: -1px 0 0 rgba(255, 63, 129, 0.6), 
-                            1px 0 0 rgba(229, 0, 60, 0.6);
-            }
-        }
-        
-        /* Responsividade aprimorada */
-        @media (max-width: 480px) {
-            .page-container {
-                padding: 8px;
-            }
-            .container {
-                padding: 20px 15px;
-                border-radius: 15px;
-                margin: 10px auto;
-            }
-            .dark-box {
-                padding: 20px 15px;
-                margin: 25px 0;
-                border-radius: 12px;
-            }
-            .teaser-box {
-                padding: 20px 15px;
-                margin: 25px 0;
-            }
-            .slider {
-                height: 35px;
-                padding: 0 15px;
-                border-radius: 18px;
-            }
-            .slider-marker {
-                padding: 10px 16px;
-                font-size: 12px;
-                top: 50px;
-            }
-            .objetivo-label {
-                top: -22px;
-                font-size: 10px;
-            }
-            .section {
-                margin: 25px 0;
-                padding-bottom: 18px;
-            }
-            .warning {
-                padding: 20px 15px;
-                font-size: 15px;
-            }
-            .cta-button {
-                padding: 18px 22px;
-                font-size: 16px;
-                max-width: 300px;
-                margin: 25px auto 12px;
-            }
-            .implication-list {
-                padding: 18px 15px;
-            }
-            .social-proof {
-                margin: 20px 0 12px;
-                padding: 15px;
-            }
-        }
-        
-        @media (max-width: 350px) {
-            .container {
-                padding: 18px 12px;
-                margin: 8px;
-            }
-            .cta-button {
-                padding: 16px 20px;
-                font-size: 15px;
-                max-width: 280px;
-            }
-            .dark-box {
-                padding: 18px 12px;
-            }
-            .teaser-box {
-                padding: 18px 12px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .container {
-                padding: 40px 35px;
-            }
-            .dark-box {
-                padding: 35px 30px;
-            }
-            .teaser-box {
-                padding: 30px 25px;
-            }
-        }
-    </style>
-    <!-- Código do Pixel do Facebook -->
-    <!-- <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '838634731699598');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" 
-        src="https://www.facebook.com/tr?id=838634731699598&ev=PageView&noscript=1"/>
-    </noscript> -->
+     @keyframes buttonPulse {
+    0%, 100% { 
+        box-shadow: 0 0 25px rgba(255, 63, 129, 0.5);
+    }
+    50% { 
+        box-shadow: 0 0 35px rgba(255, 63, 129, 0.8), 
+                   0 0 0 6px rgba(255, 63, 129, 0.1);
+    }
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glitchText {
+    0%, 100% { 
+        text-shadow: 0 0 10px rgba(255, 63, 129, 0.5);
+    }
+    25% { 
+        text-shadow: 2px 0 0 rgba(255, 63, 129, 0.8), 
+                    -2px 0 0 rgba(229, 0, 60, 0.8);
+    }
+    50% { 
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    }
+    75% { 
+        text-shadow: -1px 0 0 rgba(255, 63, 129, 0.6), 
+                    1px 0 0 rgba(229, 0, 60, 0.6);
+    }
+}
+
+/* Enhanced responsiveness */
+@media (max-width: 480px) {
+    .page-container {
+        padding: 8px;
+    }
+    .container {
+        padding: 20px 15px;
+        border-radius: 15px;
+        margin: 10px auto;
+    }
+    .dark-box {
+        padding: 20px 15px;
+        margin: 25px 0;
+        border-radius: 12px;
+    }
+    .teaser-box {
+        padding: 20px 15px;
+        margin: 25px 0;
+    }
+    .slider {
+        height: 35px;
+        padding: 0 15px;
+        border-radius: 18px;
+    }
+    .slider-marker {
+        padding: 10px 16px;
+        font-size: 12px;
+        top: 50px;
+    }
+    .objetivo-label {
+        top: -22px;
+        font-size: 10px;
+    }
+    .section {
+        margin: 25px 0;
+        padding-bottom: 18px;
+    }
+    .warning {
+        padding: 20px 15px;
+        font-size: 15px;
+    }
+    .cta-button {
+        padding: 18px 22px;
+        font-size: 16px;
+        max-width: 300px;
+        margin: 25px auto 12px;
+    }
+    .implication-list {
+        padding: 18px 15px;
+    }
+    .social-proof {
+        margin: 20px 0 12px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container {
+        padding: 18px 12px;
+        margin: 8px;
+    }
+    .cta-button {
+        padding: 16px 20px;
+        font-size: 15px;
+        max-width: 280px;
+    }
+    .dark-box {
+        padding: 18px 12px;
+    }
+    .teaser-box {
+        padding: 18px 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 40px 35px;
+    }
+    .dark-box {
+        padding: 35px 30px;
+    }
+    .teaser-box {
+        padding: 30px 25px;
+    }
+}
+</style>
+<!-- Facebook Pixel Code -->
+<!-- <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '838634731699598');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none" 
+    src="https://www.facebook.com/tr?id=838634731699598&ev=PageView&noscript=1"/>
+</noscript> -->
 </head>
 <body>
     <div class="page-container">
-        <!-- ... (loading screen anterior permanece o mesmo) ... -->
-         <!-- Tela de Loading -->
+        <!-- ... (previous loading screen remains the same) ... -->
+         <!-- Loading Screen -->
         <div id="loading-screen">
-            <div class="loading-text">🧠 DECODIFICANDO SUA MENTE FEMININA...</div>
+            <div class="loading-text">🧠 DECODING YOUR FEMALE MIND...</div>
             <div class="progress-container">
                 <div class="progress-bar">
                     <div class="progress"></div>
                 </div>
                 <div id="progress-percentage" class="progress-percentage">0%</div>
             </div>
-            <div class="analyzing-text">ANALISANDO PADRÕES COMPORTAMENTAIS...</div>
+            <div class="analyzing-text">ANALYZING BEHAVIORAL PATTERNS...</div>
         </div>
-        
-<!-- Conteúdo Principal -->
+
+<!-- Main Content -->
 <div class="container">
-    <h1 class="title">AQUI ESTÁ UMA <span class="red">ANÁLISE INICIAL</span> DAS SUAS RESPOSTAS</h1>
-    
-    <!-- Teaser Aprimorado -->
+    <h1 class="title">HERE'S AN <span class="red">INITIAL BREAKDOWN</span> OF YOUR ANSWERS</h1>
+
+    <!-- Enhanced Teaser -->
     <div class="teaser-box">
         <div class="teaser-text">
-            ALGUMAS MULHERES DIZEM QUE OS RESULTADOS DESSE MÉTODO VICIAM. OUTRAS… NÃO CONSEGUEM VIVER SEM APLICAR.
+            SOME WOMEN SAY THE RESULTS OF THIS METHOD ARE ADDICTIVE. OTHERS... CAN'T LIVE WITHOUT USING IT.
         </div>
         <div class="teaser-subtext">
-            O QUE VOCÊ VAI DESCOBRIR PODE MUDAR SUA VIDA AMOROSA PARA SEMPRE.
+            WHAT YOU'RE ABOUT TO DISCOVER MAY CHANGE YOUR LOVE LIFE FOREVER.
         </div>
     </div>
-    
-    <!-- Container com Slider -->
+
+    <!-- Slider Container -->
     <div class="dark-box">
         <div class="slider-container">
-            <label class="slider-label">💫 NÍVEL DE DOMÍNIO DA PSICOLOGIA MASCULINA</label>
+            <label class="slider-label">💫 LEVEL OF MASTERY IN MALE PSYCHOLOGY</label>
             <div class="slider">
                 <div class="slider-position">
-                    <span class="slider-text">BAIXO</span>
-                    <span class="slider-text">MÉDIO</span>
+                    <span class="slider-text">LOW</span>
+                    <span class="slider-text">MEDIUM</span>
                     <span class="slider-text">
-                        <span class="objetivo-label">🎯 META</span>
-                        ALTO
+                        <span class="objetivo-label">🎯 GOAL</span>
+                        HIGH
                     </span>
                 </div>
             </div>
-            <div class="slider-marker">✨ VOCÊ ESTÁ AQUI</div>
+            <div class="slider-marker">✨ YOU ARE HERE</div>
         </div>
     </div>
-    
-    <div class="section">
-        <h2 class="section-title"><i class="fas fa-search"></i> ANÁLISE DESCRITIVA</h2>
-        <p><span style="color: #E5003C;">💔</span>
-            <span class="fontnegrito">VOCÊ É EXATAMENTE O TIPO DE MULHER QUE OS HOMENS PERDEM TEMPO…</span> NÃO POR FALTA DE VALOR, MAS PORQUE <span class="fontnegrito">SUA MENTE AINDA NÃO DESBLOQUEOU</span> OS <span class="red">CÓDIGOS SECRETOS DE MANIPULAÇÃO</span> QUE FAZEM ELE TE VER COMO INESQUECÍVEL E SE TORNAR COMPLETAMENTE OBCECADO POR VOCÊ.</p>
-    </div>
-    
-    <div class="section">
-        <h2 class="section-title"><span style="font-size: 24px; color: #FFD700;">🔍</span>
-           PADRÃO DETECTADO:</h2>
-        <p>EXISTEM PADRÕES QUE PROVAM QUE VOCÊ ESTÁ SENDO <span class="fontnegrito">SABOTADA POR ARMADILHAS INVISÍVEIS…</span> PADRÕES QUE VOCÊ NEM PERCEBE...</p>
-        <span class="fontnegrito"><p>⚠️ O QUE ISSO SIGNIFICA PRA VOCÊ?</p></span>
-    </div>
-    
-    <div class="section">
-        <ul class="implication-list">
-            <li>VOCÊ ESTÁ FAZENDO EXATAMENTE O QUE FAZ UM HOMEM PERDER INTERESSE</li>
-            <li>ELE JÁ SABE QUE PODE IR EMBORA, MAS AINDA FICA POR PERTO</li>
-            <li>SE CONTINUAR ASSIM, O CICLO SE REPETE E VOCÊ FICA PRESA</li>
-        </ul>
-    </div>
-    
-    <div class="warning">
-        <span class="red">🚨 ESSE PADRÃO ESTÁ SABOTANDO SUA VIDA AMOROSA E NINGUÉM TE AVISOU!</span>
-    </div>
-    
-    <!-- Microcopy -->
-    <div class="microcopy">
-        👇 A ESCOLHA CERTA AGORA PODE MUDAR TUDO
-    </div>
-    
-    <button class="cta-button" onclick="window.location.href='quiz18.html'">
-        🔥 QUERO MUDAR ISSO HOJE MESMO!
-    </button>
-    
-    <!-- Social Proof -->
-    <div class="social-proof">
-        <p>✨ MAIS DE <span class="number">42.000</span> MULHERES JÁ COMEÇARAM AQUI.</p>
-    </div>
+
+   <div class="section">
+    <h2 class="section-title"><i class="fas fa-search"></i> DESCRIPTIVE ANALYSIS</h2>
+    <p><span style="color: #E5003C;">💔</span>
+        <span class="fontnegrito">YOU ARE EXACTLY THE KIND OF WOMAN MEN WASTE TIME ON…</span> NOT BECAUSE YOU LACK VALUE, BUT BECAUSE <span class="fontnegrito">YOUR MIND STILL HASN’T UNLOCKED</span> THE <span class="red">SECRET MANIPULATION CODES</span> THAT MAKE HIM SEE YOU AS UNFORGETTABLE AND BECOME COMPLETELY OBSESSED WITH YOU.</p>
+</div>
+
+<div class="section">
+    <h2 class="section-title"><span style="font-size: 24px; color: #FFD700;">🔍</span>
+       DETECTED PATTERN:</h2>
+    <p>THERE ARE PATTERNS THAT PROVE YOU’RE BEING <span class="fontnegrito">SABOTAGED BY INVISIBLE TRAPS…</span> PATTERNS YOU DON’T EVEN NOTICE...</p>
+    <span class="fontnegrito"><p>⚠️ WHAT DOES THIS MEAN FOR YOU?</p></span>
+</div>
+
+<div class="section">
+    <ul class="implication-list">
+        <li>YOU’RE DOING EXACTLY WHAT MAKES A MAN LOSE INTEREST</li>
+        <li>HE ALREADY KNOWS HE CAN LEAVE, BUT STILL STICKS AROUND</li>
+        <li>IF YOU KEEP GOING LIKE THIS, THE CYCLE REPEATS AND YOU STAY STUCK</li>
+    </ul>
+</div>
+
+<div class="warning">
+    <span class="red">🚨 THIS PATTERN IS SABOTAGING YOUR LOVE LIFE AND NO ONE TOLD YOU!</span>
+</div>
+
+<!-- Microcopy -->
+<div class="microcopy">
+    👇 THE RIGHT CHOICE NOW CAN CHANGE EVERYTHING
+</div>
+
+<button class="cta-button" onclick="window.location.href='quiz18.html'">
+    🔥 I WANT TO CHANGE THIS TODAY!
+</button>
+
+<!-- Social Proof -->
+<div class="social-proof">
+    <p>✨ MORE THAN <span class="number">42,000</span> WOMEN STARTED HERE.</p>
+</div>
 </div>
 
 
-    <script>
-        // Script para atualizar a porcentagem durante o carregamento
-        function updatePercentage() {
-            const progressElement = document.querySelector('.progress');
-            const percentageElement = document.getElementById('progress-percentage');
-            let width = 0;
-            const interval = setInterval(() => {
-                if (width >= 100) {
-                    clearInterval(interval);
-                } else {
-                    width++;
-                    percentageElement.textContent = width + '%';
-                }
-            }, 30);
-        }
+<script>
+    // Script to update percentage during loading
+    function updatePercentage() {
+        const progressElement = document.querySelector('.progress');
+        const percentageElement = document.getElementById('progress-percentage');
+        let width = 0;
+        const interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+            } else {
+                width++;
+                percentageElement.textContent = width + '%';
+            }
+        }, 30);
+    }
 
-        // Iniciar a animação de porcentagem
-        updatePercentage();
+    // Start percentage animation
+    updatePercentage();
 
-        // Remover a tela de loading após 3 segundos
-        setTimeout(() => {
-            document.getElementById('loading-screen').style.display = 'none';
-        }, 3000);
+    // Remove loading screen after 3 seconds
+    setTimeout(() => {
+        document.getElementById('loading-screen').style.display = 'none';
+    }, 3000);
 
-        // Adicionar efeito de pulse ao botão CTA
-        const ctaButton = document.querySelector('.cta-button');
-        setTimeout(() => {
-            ctaButton.style.animation = 'buttonPulse 2s infinite';
-        }, 4000);
+    // Add pulse effect to CTA button
+    const ctaButton = document.querySelector('.cta-button');
+    setTimeout(() => {
+        ctaButton.style.animation = 'buttonPulse 2s infinite';
+    }, 4000);
 
-        // Efeito de hover melhorado
-        ctaButton.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.03)';
-        });
+    // Enhanced hover effect
+    ctaButton.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px) scale(1.03)';
+    });
+    
+    ctaButton.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+
+    // Counter animation for social proof
+    function animateCounter() {
+        const numberElement = document.querySelector('.social-proof .number');
+        const target = 42000;
+        let current = 0;
+        const increment = target / 100;
         
-        ctaButton.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            numberElement.textContent = Math.floor(current).toLocaleString('en-US');
+        }, 20);
+    }
+
+    // Start counter animation after loading
+    setTimeout(() => {
+        animateCounter();
+    }, 4000);
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+            }
         });
+    }, observerOptions);
 
-        // Animação de contagem para social proof
-        function animateCounter() {
-            const numberElement = document.querySelector('.social-proof .number');
-            const target = 42000;
-            let current = 0;
-            const increment = target / 100;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                numberElement.textContent = Math.floor(current).toLocaleString('pt-BR');
-            }, 20);
-        }
-
-        // Iniciar animação de contagem após o loading
-        setTimeout(() => {
-            animateCounter();
-        }, 4000);
-
-        // Intersection Observer para animações
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        // Observar elementos que devem ser animados
-        document.querySelectorAll('.microcopy, .section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    // Observe elements that should animate
+    document.querySelectorAll('.microcopy, .section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
 </body>
 </html>

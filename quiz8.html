@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MÉTODO OBSESSÃO - TESTE GRÁTIS</title>
+    <title>OBSESSION METHOD - FREE QUIZ</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -61,7 +61,7 @@
             font-weight: bold;
             margin-bottom: 30px;
             line-height: 1.4;
-            color: var(--rosa-trauma); /* mantém vermelho para a pergunta */
+            color: var(--rosa-trauma);
             text-transform: uppercase;
         }
 
@@ -124,7 +124,6 @@
             transform: translate(-50%, -50%);
         }
 
-        /* ← AQUI: apenas o texto das opções fica branco */
         .option-text {
             font-size: 1.1rem;
             flex-grow: 1;
@@ -182,35 +181,35 @@
 <body>
     <div class="quiz-container">
         <div class="question">
-            O QUE TE FAZ SENTIR MAIS <span>FRACA</span> PERTO DELE?
+            WHAT MAKES YOU FEEL THE MOST <span>POWERLESS</span> AROUND HIM?
         </div>
         <div class="options">
             <label class="option-item">
-                <span class="option-text">QUANDO ELE ME IGNORA POR DIAS E DEPOIS DIZ “OI, SUMIDA”</span>
+                <span class="option-text">WHEN HE GHOSTS ME FOR DAYS AND THEN SHOWS UP LIKE “HEY STRANGER”</span>
                 <span class="checkbox"></span>
             </label>
             <label class="option-item">
-                <span class="option-text">QUANDO ELE FINGE SAUDADES SÓ PARA DORMIR COMIGO</span>
+                <span class="option-text">WHEN HE PRETENDS HE MISSES ME JUST TO SLEEP WITH ME</span>
                 <span class="checkbox"></span>
             </label>
             <label class="option-item">
-                <span class="option-text">QUANDO ELE POSTA STORIES COM OUTRA MULHER E EU AINDA RESPONDO OS DELE</span>
+                <span class="option-text">WHEN HE POSTS STORIES WITH ANOTHER GIRL AND I STILL RESPOND TO HIS</span>
                 <span class="checkbox"></span>
             </label>
             <label class="option-item">
-                <span class="option-text">QUANDO ELE DIZ QUE ME AMA MAS NUNCA PROVA</span>
+                <span class="option-text">WHEN HE SAYS HE LOVES ME BUT NEVER PROVES IT</span>
                 <span class="checkbox"></span>
             </label>
             <label class="option-item">
-                <span class="option-text">QUANDO JURO QUE VOU ESQUECER ELE… E AINDA CORRO ATRÁS</span>
+                <span class="option-text">WHEN I SWEAR I’M DONE WITH HIM… BUT STILL RUN BACK</span>
                 <span class="checkbox"></span>
             </label>
             <label class="option-item">
-                <span class="option-text">QUANDO ELE DIZ “VOCÊ É DIFERENTE” MAS AGE IGUAL COM TODO MUNDO</span>
+                <span class="option-text">WHEN HE SAYS “YOU’RE DIFFERENT” BUT TREATS EVERYONE THE SAME</span>
                 <span class="checkbox"></span>
             </label>
         </div>
-        <button class="continue-button">DESCUBRA O QUE FAZER SOBRE ISSO...</button>
+        <button class="continue-button">FIND OUT WHAT TO DO ABOUT IT...</button>
     </div>
 
     <script>
@@ -224,7 +223,7 @@
         document.querySelector('.continue-button').addEventListener('click', () => {
             const selected = document.querySelector('.checkbox.checked');
             if (!selected) {
-                alert('POR FAVOR, SELECIONE UMA OPÇÃO ANTES DE CONTINUAR');
+                alert('PLEASE SELECT AN OPTION BEFORE CONTINUING');
                 return;
             }
             window.location.href = 'quiz9.html';
