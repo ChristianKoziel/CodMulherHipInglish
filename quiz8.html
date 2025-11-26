@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>OBSESSION METHOD - FREE QUIZ</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -22,10 +22,8 @@
             font-family: 'Poppins', 'Bebas Neue', sans-serif;
             background: linear-gradient(to bottom, var(--roxo-venenoso) 0%, var(--preto-macabro) 100%);
             color: var(--branco-sujo);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            overflow-y: auto; /* rolagem vertical */
+            -webkit-overflow-scrolling: touch; /* rolagem suave iOS */
             text-shadow: 0 0 5px rgba(229, 0, 60, 0.3);
         }
 
@@ -33,6 +31,7 @@
             text-align: center;
             width: 90%;
             max-width: 500px;
+            margin: 50px auto;
             padding: 30px;
             background-color: rgba(12, 12, 12, 0.85);
             border-radius: 20px;
@@ -213,20 +212,22 @@
     </div>
 
     <script>
+        // Toggle checkbox on option click
         document.querySelectorAll('.option-item').forEach(item => {
             item.addEventListener('click', () => {
                 const checkbox = item.querySelector('.checkbox');
                 checkbox.classList.toggle('checked');
             });
         });
-        
+
+        // Continue button click
         document.querySelector('.continue-button').addEventListener('click', () => {
             const selected = document.querySelector('.checkbox.checked');
             if (!selected) {
                 alert('PLEASE SELECT AN OPTION BEFORE CONTINUING');
                 return;
             }
-            window.location.href = 'quiz9.html';
+            window.location.href = 'quiz9.html'; // próximo passo do quiz
         });
     </script>
 </body>
