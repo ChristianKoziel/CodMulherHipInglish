@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>OBSESSION METHOD - FREE QUIZ</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -15,15 +15,15 @@
             --champagne: #D8B9C3;
             --ouro-maldito: #FFD700;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', 'Bebas Neue', sans-serif;
             background: linear-gradient(to bottom, var(--roxo-venenoso) 0%, var(--preto-macabro) 100%);
             color: var(--branco-sujo);
-            overflow-y: auto; /* rolagem vertical */
-            -webkit-overflow-scrolling: touch; /* rolagem suave iOS */
+            overflow-y: auto; /* permite rolagem natural */
+            -webkit-overflow-scrolling: touch;
             text-shadow: 0 0 5px rgba(229, 0, 60, 0.3);
         }
 
@@ -31,7 +31,7 @@
             text-align: center;
             width: 90%;
             max-width: 500px;
-            margin: 50px auto;
+            margin: 50px auto; /* centraliza e mantém rolagem */
             padding: 30px;
             background-color: rgba(12, 12, 12, 0.85);
             border-radius: 20px;
@@ -227,7 +227,7 @@
                 alert('PLEASE SELECT AN OPTION BEFORE CONTINUING');
                 return;
             }
-            window.location.href = 'quiz9.html'; // próximo passo do quiz
+            window.location.href = 'quiz9.html';
         });
     </script>
 </body>
